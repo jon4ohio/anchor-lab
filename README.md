@@ -35,6 +35,8 @@ This repository synthesizes these capabilities into a research prototype. It doe
 
 See [docs/capability-authority.md](docs/capability-authority.md) for the full orchestration model.
 
+**First-time setup:** [docs/github-setup.md](docs/github-setup.md) — create remote repo and enable Pages.
+
 ---
 
 ## Structure
