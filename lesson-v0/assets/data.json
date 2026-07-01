@@ -1,0 +1,109 @@
+{
+  "projectName": "Tasklight",
+  "projectDescription": "A personal side project you've been working on for six months.",
+  "questions": [
+    {
+      "id": 1,
+      "snippet": "Tasklight is a personal CLI for task lists.",
+      "choices": [
+        { "label": "Project identity", "correct": true },
+        { "label": "API documentation", "correct": false },
+        { "label": "Session continuity", "correct": false },
+        { "label": "Decision", "correct": false }
+      ],
+      "feedbackCorrect": "This describes what the project is — its identity. That knowledge has a long shelf life.",
+      "feedbackIncorrect": "This isn't about what changed recently or why a choice was made. It answers: what is this project?"
+    },
+    {
+      "id": 2,
+      "snippet": "Why SQLite: single file, no server, good for a solo side project.",
+      "choices": [
+        { "label": "Decision", "correct": true },
+        { "label": "Project identity", "correct": false },
+        { "label": "Implementation scope", "correct": false },
+        { "label": "Operating instruction", "correct": false }
+      ],
+      "feedbackCorrect": "This explains why a choice was made — it constrains future work.",
+      "feedbackIncorrect": "This isn't what the project is or what you're building next. It records rationale for a choice already made."
+    },
+    {
+      "id": 3,
+      "snippet": "Export should write JSON to stdout.",
+      "choices": [
+        { "label": "Implementation scope", "correct": true },
+        { "label": "Session continuity", "correct": false },
+        { "label": "Decision", "correct": false },
+        { "label": "Project identity", "correct": false }
+      ],
+      "feedbackCorrect": "This defines intended behavior for a feature — what you're building.",
+      "feedbackIncorrect": "This isn't about what changed yesterday or why SQLite was chosen. It describes what the export feature should do."
+    },
+    {
+      "id": 4,
+      "snippet": "Always run tests before commit.",
+      "choices": [
+        { "label": "Operating instruction", "correct": true },
+        { "label": "Project identity", "correct": false },
+        { "label": "Decision", "correct": false },
+        { "label": "Implementation scope", "correct": false }
+      ],
+      "feedbackCorrect": "This is a working rule for day-to-day execution. It can stay in your AI context file — it doesn't need its own contract.",
+      "feedbackIncorrect": "Not everything becomes a durable contract. Operating instructions can live in a trimmed CLAUDE.md without duplicating Entry or Handoff."
+    },
+    {
+      "id": 5,
+      "snippet": "Yesterday we fixed the SQLite locking bug in storage.py.",
+      "choices": [
+        { "label": "Session continuity", "correct": true },
+        { "label": "Decision", "correct": false },
+        { "label": "Implementation scope", "correct": false },
+        { "label": "Project identity", "correct": false }
+      ],
+      "feedbackCorrect": "This is recent delta — what changed since the last session. It helps you continue instead of reconstruct.",
+      "feedbackIncorrect": "This isn't a permanent decision or project definition. It's what happened recently."
+    },
+    {
+      "id": 6,
+      "snippet": "We're planning an export command next.",
+      "choices": [
+        { "label": "Session continuity", "correct": true },
+        { "label": "Implementation scope", "correct": false },
+        { "label": "Decision", "correct": false },
+        { "label": "Project identity", "correct": false }
+      ],
+      "feedbackCorrect": "This is current focus — what's active now. Session knowledge helps the next contributor pick up where you left off.",
+      "feedbackIncorrect": "Planning what's next is session continuity, not the full specification of how export should behave."
+    }
+  ],
+  "responsibilityMap": [
+    {
+      "responsibility": "Project identity",
+      "snippets": ["Tasklight is a personal CLI for task lists."],
+      "contract": "Entry"
+    },
+    {
+      "responsibility": "Decision",
+      "snippets": ["Why SQLite: single file, no server, good for a solo side project."],
+      "contract": "ADR"
+    },
+    {
+      "responsibility": "Implementation scope",
+      "snippets": ["Export should write JSON to stdout."],
+      "contract": "Spec"
+    },
+    {
+      "responsibility": "Session continuity",
+      "snippets": [
+        "Yesterday we fixed the SQLite locking bug in storage.py.",
+        "We're planning an export command next."
+      ],
+      "contract": "Handoff"
+    },
+    {
+      "responsibility": "Operating instruction",
+      "snippets": ["Always run tests before commit."],
+      "contract": "CLAUDE.md (trimmed, not duplicated)"
+    }
+  ],
+  "anchorRepoUrl": "https://github.com/jon4ohio/agentic-workflow"
+}
