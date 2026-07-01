@@ -1,51 +1,46 @@
 # GitHub Setup
 
-The local repository is ready. Create the remote and enable Pages manually (API token could not create the repository automatically).
+Deployment status for [jon4ohio/anchor-lab](https://github.com/jon4ohio/anchor-lab).
 
 ---
 
-## 1. Create repository
+## Completed
 
-On GitHub, create a new public repository:
+| Step | Status |
+|------|--------|
+| Create repository | Done — [jon4ohio/anchor-lab](https://github.com/jon4ohio/anchor-lab) |
+| Push `main` | Done — HTTPS remote |
+| Deploy workflow | Done — [.github/workflows/pages.yml](../.github/workflows/pages.yml) publishes `lesson-v0/` to `gh-pages` on every push |
 
-- **Name:** `anchor-lab`
-- **Owner:** `jon4ohio`
-- **Do not** initialize with README (local repo already has content)
-
-Or, if your token has `repo` scope:
-
-```bash
-gh repo create jon4ohio/anchor-lab --public --source=. --remote=origin --push
-```
+Latest successful workflow deploys lesson assets to the `gh-pages` branch.
 
 ---
 
-## 2. Push local repo
+## One manual step — enable GitHub Pages
 
-From `/Users/mac/Downloads/anchor-lab`:
+The deploy workflow cannot enable Pages site creation (token permission). Enable once in the repository UI:
 
-```bash
-git remote add origin git@github.com:jon4ohio/anchor-lab.git
-git push -u origin main
-```
+1. Open [Settings → Pages](https://github.com/jon4ohio/anchor-lab/settings/pages)
+2. **Build and deployment** → Source: **Deploy from a branch**
+3. Branch: **`gh-pages`** · Folder: **`/ (root)`**
+4. Save
 
----
-
-## 3. Enable GitHub Pages
-
-1. Repository **Settings** → **Pages**
-2. **Build and deployment** → Source: **GitHub Actions**
-3. Push to `main` triggers [.github/workflows/pages.yml](../.github/workflows/pages.yml)
-
----
-
-## 4. Verify
-
-After the workflow completes:
+Pages URL (live after enablement, ~1 minute):
 
 **https://jon4ohio.github.io/anchor-lab/**
 
-Test locally first:
+---
+
+## Verify
+
+After enabling Pages:
+
+- [ ] https://jon4ohio.github.io/anchor-lab/ loads (not 404)
+- [ ] Welcome screen shows Tasklight framing
+- [ ] All 6 questions advance with feedback
+- [ ] Results screen shows knowledge map + contract reveal
+
+Test locally anytime:
 
 ```bash
 cd lesson-v0
@@ -53,14 +48,18 @@ python3 -m http.server 8765
 # open http://127.0.0.1:8765
 ```
 
+Verify deployed branch content (before Pages enablement):
+
+```bash
+curl -s "https://raw.githubusercontent.com/jon4ohio/anchor-lab/gh-pages/index.html" | head -5
+```
+
 ---
 
-## 5. Optional — Anchor README link
+## Anchor README link
 
-After Pages is live, add to the Anchor README (editorial, Evidence Window–safe):
+Added to [Anchor README](https://github.com/jon4ohio/agentic-workflow/blob/main/README.md) (editorial, Evidence Window–safe):
 
-```markdown
-**Try Anchor (Experimental):** [Responsibility classification lesson](https://jon4ohio.github.io/anchor-lab/)
-```
+**Try Anchor (Experimental):** https://jon4ohio.github.io/anchor-lab/
 
 Do not add Anchor `evidence.md` citations until [experiment-001-synthesis.md](../research/experiment-001-synthesis.md) is complete.
