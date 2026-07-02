@@ -2,7 +2,7 @@
 
 Experimental research repository for Anchor learning experiences.
 
-> anchor-lab produces learning experiments and evidence. It does not define, extend, or interpret the Anchor protocol. Protocol changes happen only in the [Anchor](https://github.com/jon4ohio/agentic-workflow) repository after synthesis.
+> anchor-lab produces learning experiments and evidence. It does not define, extend, or interpret the Anchor protocol. Protocol changes happen only in the [Anchor](https://github.com/jon4ohio/anchor) repository after synthesis.
 
 > **This repository is a research instrument. Success is measured by the quality of evidence it produces, not by the completeness of the software.**
 
