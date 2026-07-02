@@ -4,6 +4,8 @@ Experimental research repository for Anchor learning experiences.
 
 > anchor-lab produces learning experiments and evidence. It does not define, extend, or interpret the Anchor protocol. Protocol changes happen only in the [Anchor](https://github.com/jon4ohio/agentic-workflow) repository after synthesis.
 
+> **This repository is a research instrument. Success is measured by the quality of evidence it produces, not by the completeness of the software.**
+
 **The lab produces evidence. Anchor decides what becomes durable.**
 
 ---
@@ -16,14 +18,14 @@ A 5-minute interactive exercise — classify Tasklight project knowledge by resp
 
 ---
 
-## AI Design Authority
+## Capability Authority
 
 This repository intentionally composes multiple independent capabilities.
 
-- Research Brief defines the experiment.
-- Anchor defines protocol semantics.
-- UI/UX Pro Max informs interaction and visual design.
-- BMAD informs implementation planning.
+- **Research Brief** defines the experiment.
+- **Domain authority (Anchor)** defines protocol semantics.
+- **Design authority (UI/UX Pro Max)** informs interaction and visual design.
+- **Delivery authority (BMAD)** informs implementation planning.
 
 Do not merge or reinterpret responsibilities across repositories.
 
